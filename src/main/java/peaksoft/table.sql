@@ -1,0 +1,2 @@
+--alter table customers alter column gender type varchar(70) using gender::text;
+--alter table customers alter column family_status type varchar(70);
