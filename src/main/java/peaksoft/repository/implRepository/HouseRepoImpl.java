@@ -81,7 +81,7 @@ public class HouseRepoImpl implements HouseRepository {
     }
 
     @Override
-    public void removeHouseWithAddress(Long idHouse) {
+    public void removeHouseWithAddress(Long idHouse) { //?
         try(EntityManager entityManager = entityManagerFactory.createEntityManager()){
             entityManager.getTransaction().begin();
             House house = entityManager.find(House.class, idHouse);
