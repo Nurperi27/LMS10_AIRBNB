@@ -97,21 +97,6 @@ public class CustomerRepoImpl implements CustomerRepository {
 
     @Override
     public void removeCustomerById(Long idCustomer) { //??????????
-        /*try(EntityManager entityManager = entityManagerFactory.createEntityManager()) {
-            entityManager.getTransaction().begin();
-            Customer customer = entityManager.find(Customer.class, idCustomer);
-            if(customer.getRentInfos().isEmpty()){ //Ижарасы жок Customer-лер очсун
-                entityManager.remove(customer);
-            }else{
-                //эгерде ижарасы бар болсо checkout датасын текшерсин. Учурдагы датадан мурун болсо rent_info customer-менен чогу очуп кетсин
-                customer.getRentInfos().removeIf(r -> r.getCheckOutDate().isBefore(LocalDate.now())); //удлаяем rentInfo
-                if(customer.getRentInfos().isEmpty()){
-                    entityManager.remove(customer); //теперь саму customer
-                }else System.out.println("Учурдагы датадан мурун эмес. Don't removed!");
-            }
-            entityManager.getTransaction().commit();
-        }catch (HibernateException e){
-            System.out.println(e.getMessage());
-        }*/
+       
     }
 }
